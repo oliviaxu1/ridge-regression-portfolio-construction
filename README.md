@@ -103,7 +103,7 @@ Python, pandas, NumPy, scikit-learn, Matplotlib, seaborn and Jupyter.
 
 ## Academic Context
 
-This project is a portfolio adaptation of work originally developed during graduate coursework in *Applied Machine Learning in Finance* at the University of Melbourne. Course questions, assessment materials, marking feedback, instructor scaffolding and restricted data are not included.
+This project is a portfolio adaptation of graduate coursework completed in Applied Machine Learning in Finance at the University of Melbourne. It has been independently reorganised and revised for public presentation. Course materials and restricted data are not included.
 
 ## Author
 
