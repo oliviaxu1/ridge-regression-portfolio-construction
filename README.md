@@ -8,15 +8,15 @@ This project examines how Ridge regularisation affects out-of-sample return fore
 
 Predicted returns are used directly as unnormalised portfolio signals. The analysis evaluates both realised performance and model-implied expected performance.
 
+![Project overview](assets/project-overview.svg)
+
 ## Methodology
 
-- Rolling correlations among book leverage, momentum and market beta
+- Rolling factor analysis using three-year windows at six-month intervals
 - Missing-value filtering and feature standardisation
 - Ridge regression across 11 regularisation strengths
-- Three-year rolling training windows with annual retraining
-- Prediction-based signal construction
-- Annualised realised and model-implied expected Sharpe ratios
-- Expected-versus-realised comparison using the same alpha and signals
+- Three-year rolling training windows, 12-month forecasts and annual retraining
+- Prediction-based signal construction and out-of-sample performance evaluation
 
 See [`portfolio_analysis.ipynb`](portfolio_analysis.ipynb) for the complete methodology, code and results.
 
