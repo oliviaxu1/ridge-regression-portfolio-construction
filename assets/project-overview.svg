@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="780" viewBox="0 0 1400 780">
+  <rect width="1400" height="780" fill="#ffffff"/>
+  <style>
+    .title { font: 700 34px Arial, sans-serif; fill: #172033; }
+    .subtitle { font: 400 17px Arial, sans-serif; fill: #596579; }
+    .section { font: 700 18px Arial, sans-serif; fill: #172033; letter-spacing: .5px; }
+    .label { font: 700 14px Arial, sans-serif; fill: #3568a8; }
+    .body { font: 400 16px Arial, sans-serif; fill: #2d3748; }
+    .axis { font: 400 13px Arial, sans-serif; fill: #596579; }
+    .legend { font: 600 14px Arial, sans-serif; fill: #2d3748; }
+    .finding { font: 400 17px Arial, sans-serif; fill: #2d3748; }
+  </style>
+
+  <text x="70" y="62" class="title">Ridge Regression for Return Prediction and Portfolio Construction</text>
+  <text x="70" y="94" class="subtitle">Rolling out-of-sample forecasts, prediction-derived signals, and expected-versus-realised performance</text>
+  <line x1="70" y1="119" x2="1330" y2="119" stroke="#d8dee8" stroke-width="2"/>
+
+  <text x="70" y="162" class="section">STUDY DESIGN</text>
+  <line x1="70" y1="176" x2="510" y2="176" stroke="#3568a8" stroke-width="3"/>
+
+  <text x="70" y="216" class="label">DATA</text>
+  <text x="190" y="216" class="body">Monthly firm characteristics and future returns</text>
+
+  <text x="70" y="266" class="label">MODEL</text>
+  <text x="190" y="266" class="body">Ridge regression; 11 regularisation strengths</text>
+
+  <text x="70" y="316" class="label">WINDOW</text>
+  <text x="190" y="316" class="body">36-month training window; 12-month forecast</text>
+
+  <text x="70" y="366" class="label">UPDATE</text>
+  <text x="190" y="366" class="body">Model retrained annually</text>
+
+  <text x="70" y="416" class="label">SIGNAL</text>
+  <text x="190" y="416" class="body">Predicted return used as an unnormalised signal</text>
+
+  <text x="70" y="466" class="label">METRIC</text>
+  <text x="190" y="466" class="body">Annualised expected and realised Sharpe ratios</text>
+
+  <rect x="70" y="510" width="440" height="110" rx="6" fill="#f5f7fa" stroke="#d8dee8"/>
+  <text x="92" y="543" class="label">SAME-ALPHA COMPARISON</text>
+  <text x="92" y="574" class="body">At α = 100,000:</text>
+  <text x="92" y="603" class="body">Expected Sharpe = 2.754  |  Realised Sharpe = 0.108</text>
+
+  <line x1="558" y1="155" x2="558" y2="636" stroke="#d8dee8" stroke-width="1.5"/>
+
+  <text x="610" y="162" class="section">RIDGE PENALTY AND ANNUALISED SHARPE RATIO</text>
+
+  <!-- chart grid -->
+  <line x1="650" y1="548" x2="1310" y2="548" stroke="#bac4d1" stroke-width="1.5"/>
+  <line x1="650" y1="208" x2="650" y2="548" stroke="#bac4d1" stroke-width="1.5"/>
+  <line x1="650" y1="435" x2="1310" y2="435" stroke="#e4e8ee"/>
+  <line x1="650" y1="321" x2="1310" y2="321" stroke="#e4e8ee"/>
+  <line x1="650" y1="208" x2="1310" y2="208" stroke="#e4e8ee"/>
+
+  <!-- y labels -->
+  <text x="627" y="553" text-anchor="end" class="axis">0</text>
+  <text x="627" y="440" text-anchor="end" class="axis">1</text>
+  <text x="627" y="326" text-anchor="end" class="axis">2</text>
+  <text x="627" y="213" text-anchor="end" class="axis">3</text>
+  <text transform="translate(590 380) rotate(-90)" text-anchor="middle" class="axis">Annualised Sharpe ratio</text>
+
+  <!-- x ticks -->
+  <g class="axis" text-anchor="middle">
+    <text x="650" y="574">−5</text><text x="716" y="574">−4</text><text x="782" y="574">−3</text>
+    <text x="848" y="574">−2</text><text x="914" y="574">−1</text><text x="980" y="574">0</text>
+    <text x="1046" y="574">1</text><text x="1112" y="574">2</text><text x="1178" y="574">3</text>
+    <text x="1244" y="574">4</text><text x="1310" y="574">5</text>
+  </g>
+  <text x="980" y="610" text-anchor="middle" class="axis">log₁₀(α)</text>
+
+  <!-- expected series -->
+  <polyline fill="none" stroke="#3568a8" stroke-width="3"
+    points="650,500 716,500 782,500 848,500 914,499 980,497 1046,506 1112,501 1178,361 1244,265 1310,236"/>
+  <!-- realised series -->
+  <polyline fill="none" stroke="#d45a4c" stroke-width="3"
+    points="650,541 716,541 782,541 848,541 914,542 980,540 1046,536 1112,534 1178,513 1244,522 1310,536"/>
+
+  <g fill="#3568a8">
+    <circle cx="650" cy="500" r="4"/><circle cx="716" cy="500" r="4"/><circle cx="782" cy="500" r="4"/>
+    <circle cx="848" cy="500" r="4"/><circle cx="914" cy="499" r="4"/><circle cx="980" cy="497" r="4"/>
+    <circle cx="1046" cy="506" r="4"/><circle cx="1112" cy="501" r="4"/><circle cx="1178" cy="361" r="4"/>
+    <circle cx="1244" cy="265" r="4"/><circle cx="1310" cy="236" r="5"/>
+  </g>
+  <g fill="#d45a4c">
+    <circle cx="650" cy="541" r="4"/><circle cx="716" cy="541" r="4"/><circle cx="782" cy="541" r="4"/>
+    <circle cx="848" cy="541" r="4"/><circle cx="914" cy="542" r="4"/><circle cx="980" cy="540" r="4"/>
+    <circle cx="1046" cy="536" r="4"/><circle cx="1112" cy="534" r="4"/><circle cx="1178" cy="513" r="5"/>
+    <circle cx="1244" cy="522" r="4"/><circle cx="1310" cy="536" r="4"/>
+  </g>
+
+  <line x1="1010" y1="187" x2="1040" y2="187" stroke="#3568a8" stroke-width="3"/>
+  <text x="1050" y="192" class="legend">Model-implied expected</text>
+  <line x1="1210" y1="187" x2="1240" y2="187" stroke="#d45a4c" stroke-width="3"/>
+  <text x="1250" y="192" class="legend">Realised</text>
+
+  <line x1="70" y1="664" x2="1330" y2="664" stroke="#d8dee8" stroke-width="2"/>
+  <text x="70" y="707" class="section">FINDING</text>
+  <text x="170" y="707" class="finding">The ex-ante winner (α = 100,000) differs from the ex-post winner (α = 1,000),</text>
+  <text x="170" y="735" class="finding">showing that model-implied performance does not necessarily translate into realised performance.</text>
+</svg>
